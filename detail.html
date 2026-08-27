@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>详情 · 泉州家乡美食文旅推荐网站</title>
+  <meta name="description" content="泉州景点、美食、文化详情介绍。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="index.html">
+      <span class="logo-mark">泉</span>
+      <span>泉州风物志</span>
+    </a>
+    <button class="navbar__toggle" id="navToggle" aria-label="菜单">☰</button>
+    <nav class="navbar__links" id="navLinks">
+      <a class="navbar__link" href="index.html">首页</a>
+      <a class="navbar__link" href="index.html#explore">景点</a>
+      <a class="navbar__link" href="index.html#explore">美食</a>
+      <a class="navbar__link" href="index.html#explore">文化</a>
+    </nav>
+    <div class="navbar__search">
+      <a class="btn btn--ghost" href="index.html" style="margin-left:auto">← 返回首页</a>
+    </div>
+  </div>
+</header>
+
+<main id="detailMain" style="display:none">
+  <section class="detail-hero">
+    <div class="container">
+      <img class="detail-hero__img" id="detailHeroImg" alt="">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container detail-body">
+      <h1 class="detail-title" id="detailTitle"></h1>
+      <div class="detail-meta">
+        <span class="badge" id="detailBadge"></span>
+        <span class="loc" id="detailLoc"></span>
+        <span class="detail-recommend" id="detailRecommend"></span>
+      </div>
+      <div class="detail-content" id="detailContent"></div>
+      <div class="detail-tags" id="detailTags"></div>
+      <a class="back-link" href="index.html">← 返回首页，查看更多推荐</a>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow">MORE</div>
+        <h2 class="section-head__title">同类推荐</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="recommend-grid" id="recommendGrid"></div>
+    </div>
+  </section>
+</main>
+
+<div id="notFound" style="display:none" class="section">
+  <div class="container text-center">
+    <h2 style="font-family:var(--font-serif);font-size:34px;margin-bottom:16px">😅 没有找到该内容</h2>
+    <p style="color:var(--ink-soft);margin-bottom:24px">可能是链接有误，或该条目已下架。</p>
+    <a class="btn btn--primary" href="index.html">返回首页</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand"><span class="logo-mark">泉</span><span>泉州风物志</span></div>
+        <p class="footer__desc">一个用心展现泉州景点、美食与文化的家乡文旅推荐网站。</p>
+      </div>
+      <div>
+        <h4>内容分类</h4>
+        <ul class="footer__links">
+          <li><a href="index.html#explore">泉州景点</a></li>
+          <li><a href="index.html#explore">泉州美食</a></li>
+          <li><a href="index.html#explore">闽南文化</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 泉州家乡美食文旅推荐网站 · 毕业设计作品</div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>
