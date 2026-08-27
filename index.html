@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>泉州家乡美食文旅推荐网站 · 古城烟火与人间美味</title>
+  <meta name="description" content="推荐福建泉州的景点、美食与文化——千年海丝名城，半城烟火半城仙。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="index.html">
+      <span class="logo-mark">泉</span>
+      <span>泉州风物志</span>
+    </a>
+    <button class="navbar__toggle" id="navToggle" aria-label="菜单">☰</button>
+    <nav class="navbar__links" id="navLinks">
+      <a class="navbar__link is-active" href="index.html">首页</a>
+      <a class="navbar__link" href="#explore" data-goto="spot">景点</a>
+      <a class="navbar__link" href="#explore" data-goto="food">美食</a>
+      <a class="navbar__link" href="#explore" data-goto="culture">文化</a>
+    </nav>
+    <div class="navbar__search">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="searchInput" type="search" placeholder="搜索景点 / 美食 / 文化…" aria-label="搜索">
+      <button id="searchBtn" hidden></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== 英雄区 ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <span class="hero__eyebrow">🏮 世遗泉州 · 闽南美食之都</span>
+        <h1 class="hero__title">这里是<strong>泉州</strong><br>半城烟火，半城仙</h1>
+        <p class="hero__subtitle">一碗面线糊的烟火气，一座东西塔的千年回响。用心为你推荐泉州的山海、古街与人情味。</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#explore">开始探索泉州 →</a>
+          <a class="btn btn--ghost" href="#message">写下你的推荐</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <img class="hero__img" src="assets/images/hero1.jpg" alt="泉州古城傍晚">
+        <span class="hero__chip hero__chip--1">🏮 宋元中国的世界海洋商贸中心</span>
+        <span class="hero__chip hero__chip--2">😋 闽南美食之都</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 轮播图 ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="carousel" id="carouselTrack">
+        <div class="carousel__track">
+          <div class="carousel__slides" id="carouselSlides"></div>
+        </div>
+        <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="上一张">‹</button>
+        <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="下一张">›</button>
+        <div class="carousel__dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 推荐内容 ===== -->
+  <section class="section" id="explore">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow">RECOMMEND</div>
+        <h2 class="section-head__title">为你推荐的泉州好去处</h2>
+        <p class="section-head__desc">从千年古刹到街头小吃，从南音古乐到红砖古厝，一键筛选你感兴趣的类别。</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-tab is-active" data-cat="all">全部</button>
+        <button class="filter-tab" data-cat="spot">景点</button>
+        <button class="filter-tab" data-cat="food">美食</button>
+        <button class="filter-tab" data-cat="culture">文化</button>
+      </div>
+
+      <p class="result-note" id="resultNote"></p>
+      <div class="card-grid" id="cardGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== 留言板 ===== -->
+  <section class="section section--soft" id="message">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__eyebrow">MESSAGE</div>
+        <h2 class="section-head__title">踩过的坑 · 吃过的好店</h2>
+        <p class="section-head__desc">留下你的泉州美食攻略、景点推荐或叮嘱，分享给更多旅人。</p>
+        <div class="divider"></div>
+      </div>
+
+      <form class="msg-form" id="msgForm">
+        <div class="form-row">
+          <div>
+            <label for="msgName">你的昵称</label>
+            <input id="msgName" type="text" placeholder="如：阿妹 / 旅人小王" maxlength="20">
+          </div>
+        </div>
+        <label for="msgContent">留言内容</label>
+        <textarea id="msgContent" rows="3" placeholder="推荐一家好吃的面线糊，或一句爱泉州的话…" maxlength="500"></textarea>
+        <button class="btn btn--primary" type="submit">发布留言</button>
+      </form>
+
+      <div class="msg-list" id="msgList"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand"><span class="logo-mark">泉</span><span>泉州风物志</span></div>
+        <p class="footer__desc">一个用心展现泉州景点、美食与文化的家乡文旅推荐网站。愿你把泉州的故事，讲给更多人听。</p>
+      </div>
+      <div>
+        <h4>内容分类</h4>
+        <ul class="footer__links">
+          <li><a href="#explore" data-goto="spot">泉州景点</a></li>
+          <li><a href="#explore" data-goto="food">泉州美食</a></li>
+          <li><a href="#explore" data-goto="culture">闽南文化</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul class="footer__links">
+          <li><a href="#explore">本站介绍</a></li>
+          <li><a href="#message">留言板</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 泉州家乡美食文旅推荐网站 · 毕业设计作品 · 图片来源于开放图库，仅作学习使用</div>
+  </div>
+</footer>
+
+<!-- ===== 脚本 ===== -->
+<script src="js/data.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/main.js"></script>
+<script src="js/message.js"></script>
+</body>
+</html>
